@@ -16,7 +16,7 @@ create table Student (
 );
 
 create table Course (
-	CourseID varchar(5) primary key,
+	CourseID varchar(6) primary key,
     CourseName varchar(50) not null,
     Credits int not null
 );
@@ -44,6 +44,26 @@ insert into Student values
 ('S00006','Do Hung','Male','2002-11-11','BA'),
 ('S00007','Nguyen Mai','Female','2003-07-07','ACC'),
 ('S00008','Tran Phuc','Male','2003-09-09','IT');
+
+insert into Course values
+('C00001','Database Systems',3),
+('C00002','Programming',4),
+('C00003','Computer Networks',3),
+('C00004','Marketing',2),
+('C00005','Accounting Principles',3);
+
+insert into Enrollment values
+('S00001','C00001',8.5),
+('S00001','C00002',7.8),
+('S00002','C00001',9.0),
+('S00002','C00003',8.2),
+('S00003','C00004',7.5),
+('S00004','C00005',8.0),
+('S00005','C00001',9.5),
+('S00005','C00002',8.7),
+('S00006','C00004',6.8),
+('S00007','C00005',7.9),
+('S00008','C00001',8.0);
 
 create view ViewStudentBasic 
 as
